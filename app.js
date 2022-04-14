@@ -69,7 +69,7 @@ async function recreateDB(){
  
   let instance1 = new 
 jam({jam_name:"Strawberry",  cost:11, 
-quantity:"twenty two"}); 
+quantity:22}); 
   instance1.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("First object saved") 
@@ -77,7 +77,7 @@ quantity:"twenty two"});
   } 
       let instance2 = new 
 jam({jam_name:"mixed",  cost:10, 
-quantity:twenty}); 
+quantity:20}); 
   instance2.save( function(err,doc) { 
       if(err) return console.error(err); 
       console.log("Second object saved") 
@@ -85,7 +85,7 @@ quantity:twenty});
   
       let instance3 = new 
       jam({jam_name:"grape",  cost:15, 
-      quantity:"twenty three"}); 
+      quantity:23}); 
         instance3.save( function(err,doc) { 
             if(err) return console.error(err); 
             console.log("Third object saved") 
