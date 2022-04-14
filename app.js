@@ -29,6 +29,7 @@ var usersRouter = require('./routes/users');
 var jamRouter = require('./routes/jam');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
+var resourceRouter = require('./routes/resource');
 
 
 
@@ -50,6 +51,7 @@ app.use('/users', usersRouter);
 app.use('/jam', jamRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
+app.use('/resource', resourceRouter);
 
 
 
