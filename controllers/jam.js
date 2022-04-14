@@ -41,7 +41,7 @@ exports.jam_update_put = function(req, res) {
     res.send('NOT IMPLEMENTED: jam update PUT' + req.params.id); 
 }; 
 
-// List of all Costumes
+// List of all jams
 exports.jam_list = async function(req, res) {
     try{
     thejam = await jam.find();
