@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const jamSchema = mongoose.Schema({ 
  name: String, 
  cost: Number, 
- quantity: String 
+ quantity: Number 
 }) 
  
 module.exports = mongoose.model("jam", 
