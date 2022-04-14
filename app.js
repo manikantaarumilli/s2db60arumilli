@@ -65,7 +65,7 @@ module.exports = app;
 // We can seed the collection if needed on server start 
 async function recreateDB(){ 
   // Delete everything 
-  await Costume.deleteMany(); 
+  await jam.deleteMany(); 
  
   let instance1 = new 
 jam({jam_name:"Strawberry",  cost:11, 
