@@ -52,3 +52,16 @@ exports.jam_list = async function(req, res) {
     res.send(`{"error": ${err}}`);
     }
     };
+
+    // VIEWS 
+// Handle a show all view 
+exports.jam_view_all_Page = async function(req, res) { 
+    try{ 
+        thejam = await jam.find(); 
+        res.render('jam', { title: 'jam Search Results', results: thejam }); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
