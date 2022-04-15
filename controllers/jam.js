@@ -25,7 +25,7 @@ exports.jam_create_post = async function(req, res) {
     // Even though bodies can be in many different formats, we will be picky
     // and require that it be a json object
     // {"costume_type":"goat", "cost":12, "size":"large"}
-    document.jam_name = req.body.jam_name;
+    document.name = req.body.name;
     document.cost = req.body.cost;
     document.quantity = req.body.quantity;
     try{
