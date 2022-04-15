@@ -49,8 +49,8 @@ exports.jam_update_put = async function(req, res) {
     try { 
         let toUpdate = await jam.findById( req.params.id) 
         // Do updates of properties 
-        if(req.body.jam_name)  
-               toUpdate.jam_name = req.body.jam_name; 
+        if(req.body.name)  
+               toUpdate.name = req.body.name; 
         if(req.body.cost) toUpdate.cost = req.body.cost; 
         if(req.body.quantity) toUpdate.quantity = req.body.quantity; 
         let result = await toUpdate.save(); 
