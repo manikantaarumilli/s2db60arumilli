@@ -45,8 +45,7 @@ exports.jam_delete = function(req, res) {
  
 // Handle jam update form on PUT. 
 exports.jam_update_put = async function(req, res) { 
-    console.log(`update on id ${req.params.id} with body 
-${JSON.stringify(req.body)}`) 
+    console.log(`update on id ${req.params.id} with body ${JSON.stringify(req.body)}`) 
     try { 
         let toUpdate = await jam.findById( req.params.id) 
         // Do updates of properties 
