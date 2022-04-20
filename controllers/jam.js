@@ -102,7 +102,7 @@ exports.jam_view_one_Page = async function(req, res) {
     try{ 
         result = await jam.findById( req.query.id) 
         res.render('jamdetail',  
-{ title: 'Costume Detail', toShow: result }); 
+{ title: 'jam Detail', toShow: result }); 
     } 
     catch(err){ 
         res.status(500) 
