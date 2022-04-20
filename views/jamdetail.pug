@@ -1,0 +1,23 @@
+extends layout
+
+block content
+ h1= title
+
+ - let jamid = toShow._id
+ - let jam_name= toShow.jam_name
+ - let cost = toShow.cost
+ - let quantity = toShow.quantity
+    
+  div
+    div.row
+      div(class='jamAttr mr-3') jam ID is:
+      div #{jamid}
+    div.row
+      div(class='jamAttr mr-3') jam_name is:
+      div #{jam_name}
+    div.row
+      div(class='jamAttr mr-3') cost is:
+      div #{cost}
+    div.row
+      div(class='jamAttr mr-3') quantity is:
+      div #{quantity}
