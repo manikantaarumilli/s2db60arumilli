@@ -17,13 +17,13 @@ block content
   form(id='jamForm',class="text-center", action=actionid, method="PUT") 
     div.form-group 
         label.jamAttr(for='jam_name') name 
-        input#Hotel_name(type='text', name='Hotel_name', value= Hotel_name) 
+        input#jam_name(type='text', name='name', value= jam_name) 
     div.form-group 
-        label.hotelAttr(for='Location') Location
-        input#Location(type='text', name='Location', value= Location) 
+        label.jamAttr(for='cost') cost
+        input#Location(type='text', name='cost', value= cost) 
     div.form-group 
-        label.hotelAttr(for='price') price 
-        input#price(type='number', name='price', value= price) 
+        label.jamAttr(for='quantity') quantity 
+        input#quantity(type='number', name='quantity', value= quantity) 
     input(type="submit" class="btn btn-warning m-2") 
  
   script. 
