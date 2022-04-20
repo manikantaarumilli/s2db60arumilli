@@ -3,20 +3,20 @@ extends layout
 block content 
   h1= title 
  
-  form(id='hotelForm', action="/resource/hotel", method="POST") 
+  form(id='jamForm', action="/resource/jam", method="POST") 
     div.form-group 
-        label.hotelAttr(for='Hotel_name') Hotel_name 
-        input#Hotel_name(type='text', name='Hotel_name') 
+        label.jamAttr(for='jam_name') name 
+        input#jam_name(type='text', name='jam_name') 
     div.form-group 
-        label.hotelAttr(for='Location') Location 
-        input#Location(type='text', name='Location') 
+        label.jamAttr(for='cost') cost 
+        input#cost(type='text', name='cost') 
     div.form-group 
-        label.hotelAttr(for='price') price 
-        input#price(type='number', name='price') 
+        label.jamAttr(for='quantity') quantity 
+        input#quantity(type='number', name='quantity') 
     input(type="submit") 
  
   script. 
-    document.forms['hotelForm'].addEventListener('submit', (event) => { 
+    document.forms['jamForm'].addEventListener('submit', (event) => { 
       event.preventDefault(); 
       // TODO do something here to show user that form is being submitted 
       fetch(event.target.action, { 
