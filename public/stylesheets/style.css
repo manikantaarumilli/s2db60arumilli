@@ -10,10 +10,10 @@ a {
   background-color: aquamarine; 
   width: 120px; 
 } 
-.toolJAttr{
-background-color: blanchedalmond;
-width: 110;
-border: 2px dashed black;
-padding:25px;
-width:29%;
+.toolJamAttr{
+  background-color: blanchedalmond;
+  width: 110;
+  border: 2px dashed black;
+  padding:25px;
+  width:29%;
 }
