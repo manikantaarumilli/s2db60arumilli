@@ -95,3 +95,17 @@ exports.jam_view_all_Page = async function(req, res) {
         res.send(`{"error": ${err}}`); 
     }   
 }; 
+
+// Handle a show one view with id specified by query 
+exports.jam_view_one_Page = async function(req, res) { 
+    console.log("single view for id "  + req.query.id) 
+    try{ 
+        result = await jam.findById( req.query.id) 
+        res.render('jamdetail',  
+{ title: 'Costume Detail', toShow: result }); 
+    } 
+    catch(err){ 
+        res.status(500) 
+        res.send(`{'error': '${err}'}`); 
+    } 
+}; 
