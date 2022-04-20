@@ -137,3 +137,16 @@ exports.jam_update_Page =  async function(req, res) {
         res.send(`{'error': '${err}'}`); 
     } 
 }; 
+// Handle a delete one view with id from query 
+exports.jam_delete_Page = async function(req, res) { 
+    console.log("Delete view for id "  + req.query.id) 
+    try{ 
+        result = await jam.findById(req.query.id) 
+        res.render('jamdelete', { title: 'jam Delete', toShow: 
+result }); 
+    } 
+    catch(err){ 
+        res.status(500) 
+        res.send(`{'error': '${err}'}`); 
+    } 
+}; 
