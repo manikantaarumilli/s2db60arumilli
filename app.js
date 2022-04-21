@@ -18,7 +18,8 @@ passport.use(new LocalStrategy(
       } 
       return done(null, user); 
     }); 
-  } 
+  }));
+
 
 const connectionString =  
 process.env.MONGO_CON 
