@@ -1,33 +1,25 @@
 extends layout
+
 block content
   h1= title
-  p Welcome to the jam 
-  div(class="container-fluid")
-        div(class="row")
-            -
-                let jam = [
-                    {
-                        "name": "Strawberry",
-                        "cost": 11,
-                        "quantity": "twenty two"
-                    },
-                    {
-                        "name": "mixed",
-                        "cost": 10,
-                        "quantity": "twenty"
-                    },
-                    {
-                        "name": "grape",
-                        "cost": 15,
-                        "quantity": "twenty three"
-                    },                   
-                ]
-            each v,index in jam
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.cost}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.quantity}
-  script.                
-        function buy(intemNo)
-        {
-              alert(`you purchased jam ${intemNo+1}`)
-        }
+  - let items = results
+   div(class = "container-fluid")
+    div(class = "row m-1")
+     each item in items  
+      - let destination = `dispatch(\"/jam/update?id=${item._id}\")`
+      //- let destination1 = `dispatch(\"/Season/create\")`
+      //- let destination2 = `dispatch(\"/Season/detail?id=${item._id}\")`
+      //- let destination3 = `dispatch(\"/Season/delete?id=${item._id}\")`
+      div(class="row-sm-2", class="m-1") jam_name: #{item.name}(#{item.cost}) is #{item.quantity}  
+        button.btn( class="btn-primary ml-1", onclick= destination, style = "margin:8px;") Update
+        //-button.btn( class="btn-primary ml-1", onclick= destination1, style = "margin:8px;" ) Create
+        //-button.btn( class="btn-primary ml-1", onclick= destination2, style = "margin:8px;" ) Detail
+        //-button.btn( class="btn-primary ml-1", onclick= destination3, style = "margin:8px;" ) Delete
+  script.
+    function buy(itemNo){
+        alert(`You purchased item ${itemNo+1}`)
+    }
+  script. 
+    function dispatch(path){ 
+        window.location.href=path 
+    } 
