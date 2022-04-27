@@ -1,6 +1,10 @@
 const mongoose = require("mongoose") 
 const jamSchema = mongoose.Schema({ 
- name: String, 
+    name:{
+     type: String,
+     minLength: 1,
+     maxLength: 10
+    },
  cost: Number, 
  quantity: String 
 }) 
