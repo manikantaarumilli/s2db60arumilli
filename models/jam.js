@@ -5,7 +5,11 @@ const jamSchema = mongoose.Schema({
      minLength: 1,
      maxLength: 10
     },
-    cost: Number,
+    cost: {
+      type: Number,
+      min: 1,
+    /*  max: 2 */
+    },
  quantity: String 
 }) 
  
