@@ -8,7 +8,7 @@ const jamSchema = mongoose.Schema({
     cost: {
       type: Number,
       min: 1,
-      max: 2
+    /*  max: 2 */
     },
  quantity: String 
 }) 
